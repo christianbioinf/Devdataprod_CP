@@ -1,0 +1,8 @@
+### About
+
+I am a researcher at the Bioinformatics group at the University of Leipzig and present the results of a publication in
+an interactive manner as a potential alternative to lengthy Supplementary Materials.
+
+The benchmarks were performed as part of my publication ([Otto et al., 2014](http://bioinformatics.oxfordjournals.org/content/30/13/1837.abstract); [electronic supplement](http://www.bioinf.uni-leipzig.de/supplements/13-008)). They used a variety of [NGS](http://en.wikibooks.org/wiki/Next_Generation_Sequencing_%28NGS%29) datasets with several popular [read aligners](http://en.wikipedia.org/wiki/List_of_sequence_alignment_software#Short-Read_Sequence_Alignment) in terms of sensitivity, number of false positives, memory consumption, and running time. Moreover, the first two measures were calculated w/r/t two different variants of the mapping task. On top of that (not yet displayed here), different parameter settings of the read aligners were assessed.
+
+As a consequence, the results were multi-dimensional and therefore hard to illustrate in their full extend without pages of almost identical graphs in the Supplementary Material. This app should now help to provide an interactive electronic supplement to fully explore the results of this analysis. It makes it even possible to extend the benchmarks to more dimensions such as the parameter settings or the inclusion of a larger variety of read aligners (by showing only a couple of them at the same time). Using the data tab, one can also get the underlying numbers and download the complete dataset to reproduce the figures or come up with different visualizations.
