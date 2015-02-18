@@ -19,7 +19,7 @@ myPreprocessData <- function(data){
     ## relabeling
     data$type <- revalue(data$type, c("allbest"="all-best", "anybest"="any-best"))
     data$tool <- revalue(data$tool, c("bowtie2" = "Bowtie 2", "bwa" = "BWA/BWA-SW",
-                                      "bwamem" = "BWA-MEM", "gem" = "GEM",
+                                      "bwasw" = "BWA/BWA-SW", "bwamem" = "BWA-MEM", "gem" = "GEM",
                                       "segemehl" = "segemehl", "star" = "STAR"))
     data$dataset <- revalue(data$dataset, c("artificial_illumina"="Illumina (artificial)",
                             "artificial_illumina_short"="Illumina (short artificial)",
