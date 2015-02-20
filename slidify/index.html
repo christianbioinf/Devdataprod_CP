@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Benchmarking read aligners</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Benchmarking read aligners">
+  <meta name="author" content="Christian Otto">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  <script src="libraries/widgets/highcharts/js/jquery-1.9.1.min.js"></script>
+<script src="libraries/widgets/highcharts/js/highcharts.js"></script>
+<script src="libraries/widgets/highcharts/js/highcharts-more.js"></script>
+<script src="libraries/widgets/highcharts/js/exporting.js"></script>
+
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Benchmarking read aligners</h1>
+    <h2>Course Project of the Developing Data Product Course</h2>
+    <p>Christian Otto<br/>Bioinformatics Group, University of Leipzig, Germany</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <article data-timings="">
+    <style>
+slides > slide:not(.nobackground):after {
+  content: ""
+}
+</style>
+
+<h2>About</h2>
+
+<p><br/></p>
+
+<ul>
+<li>aligning reads from
+<a href="http://en.wikibooks.org/wiki/Next_Generation_Sequencing_%28NGS%29">NGS</a>
+experiments is an important computational task</li>
+<li>benchmarking of <a href="http://en.wikipedia.org/wiki/List_of_sequence_alignment_software#Short-Read_Sequence_Alignment">read
+aligners</a>
+is therefore necessary for non-experts to decide on<br/>the &quot;best&quot; tool
+for their specific task</li>
+<li>done as part of my publication (<a href="http://bioinformatics.oxfordjournals.org/content/30/13/1837.abstract">Otto et
+al., 2014</a>)</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Problem: Dimensionality</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Dimensions of the benchmarking results (current extent in parenthesis):</p>
+
+<ul>
+<li>datasets (9)</li>
+<li>benchmarking measures (4)</li>
+<li>parameter settings (3)</li>
+<li>selection of up to 6 read aligners (-)</li>
+</ul>
+
+<p>Already with the existing numbers, there would be 9 * 4 * 3 = 108 possible figures.</p>
+
+<p>That&#39;s one hell of a boring supplement.</p>
+
+<p>(I know there are tricks to combine some of them together - as I did in the supplement but this will not solve the problem.)</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Solution: Shiny app as interactive supplement</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>input selection via dropdown list and radio buttons </li>
+<li>interactive and nice rCharts figures (see below)</li>
+<li>inspect and download raw numbers</li>
+</ul>
+
+<iframe src="fig/h.html" width=100%, height=500></iframe>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Result: <a href="https://christianbioinf.shinyapps.io/Benchmarks/">Benchmarks Shiny App</a></h2>
+  </hgroup>
+  <article data-timings="">
+    <p><br/>
+<img class="center" src="assets/img/screenshot.png" height=350></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title=''>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Problem: Dimensionality'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Solution: Shiny app as interactive supplement'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Result: <a href="https://christianbioinf.shinyapps.io/Benchmarks/">Benchmarks Shiny App</a>'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- MathJax: Fall back to local if CDN offline but local image fonts are not supported (saves >100MB) -->
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$'], ['\\(','\\)']],
+        processEscapes: true
+      }
+    });
+  </script>
+  <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  <!-- <script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/2.0-latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script> -->
+  <script>window.MathJax || document.write('<script type="text/x-mathjax-config">MathJax.Hub.Config({"HTML-CSS":{imageFont:null}});<\/script><script src="libraries/widgets/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"><\/script>')
+</script>
+<!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
